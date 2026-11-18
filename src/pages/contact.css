@@ -1,0 +1,1185 @@
+
+/* =========================================
+   BRAYNEX INFOTECH - CONTACT PAGE
+   Enhanced Animation Edition
+   Existing Theme Preserved
+========================================= */
+
+.contact-page {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* =========================================
+   INTRO SECTION
+========================================= */
+
+.contact-intro-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.contact-intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-intro-content > .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  animation: contactFadeDown 0.8s ease both;
+}
+
+.contact-intro-content > .eyebrow svg {
+  animation: contactSparkle 3s ease-in-out infinite;
+}
+
+.contact-intro-content .section-title {
+  max-width: 620px;
+  margin-top: 18px;
+  line-height: 1.17;
+  animation: contactTextReveal 0.9s ease both;
+}
+
+.contact-highlight {
+  display: block;
+  color: var(--teal);
+  animation: contactHighlightReveal 1.1s ease both;
+}
+
+.contact-intro-content > p {
+  max-width: 540px;
+  line-height: 1.9;
+  margin-top: 20px;
+  animation: contactFadeUp 1s ease 0.2s both;
+}
+
+.contact-points {
+  display: grid;
+  gap: 15px;
+  margin: 27px 0 32px;
+}
+
+.contact-points > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  animation: contactFadeRight 0.7s ease forwards;
+}
+
+.contact-points > div:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.contact-points > div:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.contact-points > div:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.contact-points svg {
+  color: var(--teal);
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+.contact-points > div:hover svg {
+  transform: scale(1.3) rotate(12deg);
+}
+
+.contact-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  animation: contactFadeUp 0.9s ease 0.5s both;
+}
+
+.contact-primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px color-mix(in srgb, var(--teal) 20%, transparent);
+}
+
+.contact-primary-btn svg,
+.contact-method-link svg,
+.contact-secondary-link svg {
+  transition: transform 0.35s ease;
+}
+
+.contact-primary-btn:hover svg,
+.contact-method-link:hover svg,
+.contact-secondary-link:hover svg {
+  transform: translate(5px, -4px);
+}
+
+/* =========================================
+   CONTACT VISUAL
+========================================= */
+
+.contact-visual-wrap {
+  min-width: 0;
+  animation: contactVisualEnter 1.1s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.contact-visual {
+  min-height: 440px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid color-mix(in srgb, var(--teal) 20%, var(--line));
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      color-mix(in srgb, var(--teal) 13%, transparent),
+      transparent 47%
+    ),
+    linear-gradient(
+      145deg,
+      var(--surface),
+      color-mix(in srgb, var(--bg) 80%, var(--gold))
+    );
+  box-shadow: 18px 18px 0 color-mix(in srgb, var(--gold) 20%, transparent);
+  transition: box-shadow 0.5s ease;
+}
+
+.contact-visual:hover {
+  box-shadow: 12px 12px 0 color-mix(in srgb, var(--gold) 30%, transparent);
+}
+
+.contact-visual-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.27;
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--teal) 17%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--teal) 17%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle, black 15%, transparent 78%);
+  animation: contactGridMove 18s linear infinite;
+}
+
+.contact-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid color-mix(in srgb, var(--teal) 28%, transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.contact-orbit-one {
+  width: 190px;
+  height: 190px;
+  animation: contactOrbit 14s linear infinite;
+}
+
+.contact-orbit-two {
+  width: 290px;
+  height: 290px;
+  border-style: dashed;
+  animation: contactOrbitReverse 23s linear infinite;
+}
+
+.contact-orbit-three {
+  width: 390px;
+  height: 390px;
+  border-color: color-mix(in srgb, var(--gold) 45%, transparent);
+  animation: contactOrbit 32s linear infinite;
+}
+
+.contact-signal {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--gold) 16%, transparent);
+}
+
+.signal-one {
+  top: 24%;
+  left: 25%;
+  animation: signalPulse 2.5s ease-in-out infinite;
+}
+
+.signal-two {
+  right: 20%;
+  top: 47%;
+  background: var(--teal);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--teal) 15%, transparent);
+  animation: signalPulse 3s ease-in-out infinite 0.5s;
+}
+
+.signal-three {
+  bottom: 22%;
+  left: 42%;
+  animation: signalPulse 2.8s ease-in-out infinite 1s;
+}
+
+.contact-center {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  animation: contactCenterFloat 5s ease-in-out infinite;
+}
+
+.contact-center-icon {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  border-radius: 27px;
+  color: var(--surface);
+  background: var(--teal);
+  box-shadow:
+    0 15px 35px color-mix(in srgb, var(--teal) 25%, transparent),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+  transform: rotate(-7deg);
+  animation: contactIconMotion 5s ease-in-out infinite;
+}
+
+.contact-center-icon svg {
+  animation: contactIconPulse 3s ease-in-out infinite;
+}
+
+.contact-center > span {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  animation: contactLetterSpacing 4s ease-in-out infinite;
+}
+
+.contact-center > small {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.contact-float {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+  font-size: 11px;
+  font-weight: 700;
+  animation: contactFloat 5s ease-in-out infinite;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.contact-float:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.11);
+}
+
+.contact-float svg {
+  color: var(--teal);
+  animation: contactMiniIcon 3s ease-in-out infinite;
+}
+
+.contact-float-top {
+  top: 19%;
+  right: 7%;
+}
+
+.contact-float-bottom {
+  bottom: 18%;
+  left: 7%;
+  animation-delay: -2.5s;
+}
+
+.contact-visual-label,
+.contact-visual-index {
+  position: absolute;
+  bottom: 22px;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.contact-visual-label {
+  left: 24px;
+}
+
+.contact-visual-index {
+  right: 24px;
+}
+
+/* =========================================
+   CONTACT OPTIONS
+========================================= */
+
+.contact-options-section {
+  background: color-mix(in srgb, var(--surface) 78%, var(--bg));
+}
+
+.contact-section-heading {
+  max-width: 700px;
+  margin-bottom: 42px;
+}
+
+.contact-section-heading .section-title {
+  margin-top: 13px;
+}
+
+.contact-section-heading > p {
+  margin-top: 13px;
+  line-height: 1.8;
+}
+
+.contact-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.contact-method-card {
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.contact-method-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 70%;
+  height: 2px;
+  background: var(--teal);
+  transition: left 0.65s ease;
+}
+
+.contact-method-card::after {
+  content: '';
+  position: absolute;
+  right: -55px;
+  bottom: -75px;
+  width: 160px;
+  height: 160px;
+  border: 1px solid color-mix(in srgb, var(--teal) 20%, transparent);
+  border-radius: 50%;
+  transition: transform 0.7s ease;
+}
+
+.contact-method-card:hover {
+  transform: translateY(-9px);
+  border-color: var(--teal);
+  box-shadow: 0 20px 45px rgba(28,48,45,0.08);
+}
+
+.contact-method-card:hover::before {
+  left: 0;
+}
+
+.contact-method-card:hover::after {
+  transform: scale(1.7) rotate(35deg);
+}
+
+.contact-method-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.contact-method-icon {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--teal) 11%, var(--surface));
+  transition:
+    color 0.4s ease,
+    background 0.4s ease,
+    transform 0.45s ease;
+}
+
+.contact-method-icon svg {
+  transition: transform 0.4s ease;
+}
+
+.contact-method-card:hover .contact-method-icon {
+  color: var(--surface);
+  background: var(--teal);
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.contact-method-card:hover .contact-method-icon svg {
+  transform: scale(1.12);
+}
+
+.contact-method-number {
+  color: color-mix(in srgb, var(--teal) 45%, var(--line));
+  font-family: var(--display);
+  font-size: 25px;
+  font-weight: 900;
+  transition: transform 0.4s ease;
+}
+
+.contact-method-card:hover .contact-method-number {
+  transform: translateY(-5px);
+}
+
+.contact-method-label {
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-method-card h3 {
+  margin: 12px 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.contact-method-card:hover h3 {
+  color: var(--teal);
+}
+
+.contact-method-card > p {
+  max-width: 390px;
+  min-height: 48px;
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.contact-method-value {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contact-method-link {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* =========================================
+   PROCESS SECTION
+========================================= */
+
+.contact-process-section {
+  position: relative;
+}
+
+.contact-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.contact-process-card {
+  position: relative;
+  padding: 27px 25px;
+  border-top: 2px solid var(--line);
+  transition:
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.contact-process-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-8px);
+}
+
+.contact-process-number {
+  color: var(--gold);
+  font-family: var(--display);
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+.contact-process-card:hover .contact-process-number {
+  transform: translateX(8px);
+  color: var(--teal);
+}
+
+.contact-process-line {
+  height: 1px;
+  margin: 19px 0;
+  background: var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-process-line span {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 38px;
+  height: 4px;
+  background: var(--teal);
+  transition: width 0.65s ease;
+}
+
+.contact-process-card:hover .contact-process-line span {
+  width: 100%;
+}
+
+.contact-process-card h3 {
+  margin-bottom: 11px;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 19px;
+  transition: transform 0.3s ease;
+}
+
+.contact-process-card:hover h3 {
+  transform: translateX(4px);
+}
+
+.contact-process-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.contact-process-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 17px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.contact-process-final svg {
+  animation: contactCheckPulse 2s ease-in-out infinite;
+}
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.contact-final-section {
+  padding-top: 20px;
+}
+
+.contact-final-card {
+  min-height: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  overflow: hidden;
+  padding: 65px;
+  border-radius: 20px;
+  color: var(--surface);
+  background: var(--ink);
+  isolation: isolate;
+  transition: box-shadow 0.4s ease;
+}
+
+.contact-final-card:hover {
+  box-shadow: 0 20px 55px rgba(28,48,45,0.18);
+}
+
+.contact-final-content {
+  max-width: 720px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-final-content .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+}
+
+.contact-final-content .eyebrow svg {
+  animation: contactSparkle 3s ease-in-out infinite;
+}
+
+.contact-final-content h2 {
+  margin: 20px 0 15px;
+  color: var(--surface);
+  font-family: var(--display);
+  font-size: clamp(30px, 4vw, 49px);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.contact-final-content h2 span {
+  color: var(--gold);
+}
+
+.contact-final-content p {
+  max-width: 550px;
+  color: color-mix(in srgb, var(--surface) 75%, transparent);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.contact-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  margin-top: 28px;
+}
+
+.contact-final-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  background: var(--gold);
+  border-color: var(--gold);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.contact-final-btn:hover {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--surface);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contact-final-btn svg {
+  transition: transform 0.35s ease;
+}
+
+.contact-final-btn:hover svg {
+  transform: translate(4px, -4px);
+}
+
+.contact-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--surface);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-final-mark {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--gold) 50%, transparent);
+  border-radius: 50%;
+  color: var(--gold);
+  transition:
+    transform 0.6s cubic-bezier(.2,.8,.2,1),
+    background 0.5s ease;
+}
+
+.contact-final-card:hover .contact-final-mark {
+  transform: rotate(-45deg) scale(1.12);
+  background: color-mix(in srgb, var(--gold) 13%, transparent);
+}
+
+.contact-final-decoration {
+  position: absolute;
+  z-index: 0;
+  right: -100px;
+  top: -190px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid color-mix(in srgb, var(--gold) 17%, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-final-ring {
+  position: absolute;
+  inset: 50px;
+  border: 1px solid color-mix(in srgb, var(--gold) 14%, transparent);
+  border-radius: 50%;
+  animation: contactOrbit 35s linear infinite;
+}
+
+.contact-final-ring-two {
+  inset: 110px;
+  border-style: dashed;
+  animation: contactOrbitReverse 45s linear infinite;
+}
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.contact-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(.2,.7,.2,1);
+}
+
+.contact-reveal.contact-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-method-card.contact-visible:nth-child(2),
+.contact-process-card.contact-visible:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.contact-process-card.contact-visible:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+
+@keyframes contactOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes contactOrbitReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes signalPulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes contactCenterFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes contactFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-11px) rotate(1deg);
+  }
+}
+
+@keyframes contactSparkle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+}
+
+@keyframes contactIconMotion {
+  0%, 100% {
+    transform: rotate(-7deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(3deg) translateY(-7px);
+  }
+}
+
+@keyframes contactIconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes contactMiniIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes contactLetterSpacing {
+  0%, 100% {
+    letter-spacing: 3px;
+  }
+
+  50% {
+    letter-spacing: 4.5px;
+  }
+}
+
+@keyframes contactGridMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 34px 34px;
+  }
+}
+
+@keyframes contactTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+    clip-path: inset(0 0 100% 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes contactHighlightReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes contactFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes contactVisualEnter {
+  from {
+    opacity: 0;
+    transform: translateX(35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes contactCheckPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .contact-intro-grid {
+    gap: 35px;
+  }
+
+  .contact-visual {
+    min-height: 380px;
+  }
+
+  .contact-orbit-three {
+    width: 330px;
+    height: 330px;
+  }
+
+  .contact-final-card {
+    padding: 48px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .contact-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .contact-intro-content .section-title {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .contact-visual {
+    min-height: 340px;
+    box-shadow: 9px 9px 0 color-mix(in srgb, var(--gold) 20%, transparent);
+  }
+
+  .contact-orbit-one {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-orbit-two {
+    width: 230px;
+    height: 230px;
+  }
+
+  .contact-orbit-three {
+    width: 300px;
+    height: 300px;
+  }
+
+  .contact-center-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .contact-float {
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+
+  .contact-float-top {
+    right: 3%;
+  }
+
+  .contact-float-bottom {
+    left: 3%;
+  }
+
+  .contact-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-method-card {
+    padding: 25px;
+  }
+
+  .contact-method-card > p {
+    min-height: auto;
+  }
+
+  .contact-process-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contact-process-card {
+    padding: 22px 18px;
+  }
+
+  .contact-final-card {
+    min-height: auto;
+    padding: 40px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-final-content h2 {
+    font-size: clamp(28px, 8vw, 39px);
+  }
+
+  .contact-final-mark {
+    width: 58px;
+    height: 58px;
+  }
+
+  .contact-final-decoration {
+    right: -250px;
+  }
+
+  .contact-final-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .contact-visual {
+    min-height: 300px;
+  }
+
+  .contact-float {
+    gap: 7px;
+    padding: 9px;
+    font-size: 9px;
+  }
+
+  .contact-center-icon {
+    width: 67px;
+    height: 67px;
+  }
+
+  .contact-final-card {
+    padding: 32px 20px;
+  }
+
+  .contact-method-card {
+    padding: 22px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-page *,
+  .contact-page *::before,
+  .contact-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .contact-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .contact-points > div {
+    opacity: 1;
+  }
+}
